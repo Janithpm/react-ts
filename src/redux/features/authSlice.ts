@@ -1,27 +1,26 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 type userType = {
-    id: string,
-    first_name: string,
-    last_name: string,
-    email: string,
-    role: string,
-    profile_picture: string,
+    id: string
+    first_name: string
+    last_name: string
+    email: string
+    role: string
+    profile_picture: string
 }
 
-
 const initialState = {
-    uid: "",
-    first_name: "",
-    last_name: "",
-    email: "",
-    role: "",
+    uid: '',
+    first_name: '',
+    last_name: '',
+    email: '',
+    role: '',
     isAuthenticated: false,
-    profile_picture: "",
+    profile_picture: '',
 }
 
 const authSlice = createSlice({
-    name: "auth",
+    name: 'auth',
     initialState: initialState,
     reducers: {
         setUser: (state, action: PayloadAction<userType>) => {
@@ -35,15 +34,14 @@ const authSlice = createSlice({
         },
         removeUser: (state) => {
             // remove user from state
-            state.uid = ""
-            state.first_name = ""
-            state.last_name = ""
-            state.email = ""
-            state.role = ""
+            state.uid = ''
+            state.first_name = ''
+            state.last_name = ''
+            state.email = ''
+            state.role = ''
             state.isAuthenticated = false
-            state.profile_picture = ""
-        }
-
+            state.profile_picture = ''
+        },
     },
 })
 

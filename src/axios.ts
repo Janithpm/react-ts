@@ -1,13 +1,12 @@
-import axios from "axios"
+import axios from 'axios'
 
-const baseURL = "http://localhost:5400"
+const baseURL = 'http://localhost:5400'
 
 const axiosInstance = axios.create({
     baseURL: baseURL,
     headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
     },
 })
 
